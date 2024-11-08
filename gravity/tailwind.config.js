@@ -1,5 +1,15 @@
-// tailwind.config.js
-module.exports = {
+// // tailwind.config.js
+// module.exports = {
+//   content: [
+//     "./index.html",
+//     "./src/**/*.{js,ts,jsx,tsx}",
+//   ],
+//   theme: {
+//     extend: {},
+//   },
+//   plugins: [],
+// };
+export default {
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
@@ -9,3 +19,4 @@ module.exports = {
   },
   plugins: [],
 };
+
