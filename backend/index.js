@@ -40,10 +40,11 @@ connectDb();
 
 // Use CORS middleware
 const corsOptions = {
-    origin: 'https://gravityglobalexport.com',  // Allow only the frontend domain
-    methods: ['GET', 'POST', 'PUT', 'DELETE'],
-    allowedHeaders: ['Content-Type', 'Authorization'],
+  origin: ['https://gravityglobalexport.com', 'https://www.gravityglobalexport.com'],
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  allowedHeaders: ['Content-Type', 'Authorization']
 };
+
 
 app.use(cors(corsOptions)); // Apply the CORS configuration
 
