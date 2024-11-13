@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { BASE_URL } from "../constant";
 
 const Login = ({ setToken }) => {
   const navigation = useNavigate();
@@ -14,7 +15,7 @@ const Login = ({ setToken }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:8000/auth/login", formData);
+      const response = await axios.post(`${BASE_URL}/auth/login`, formData);
       navigation("/home")
     } catch (err) {
       console.error(err);

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from 'react-router-dom';
+import { BASE_URL } from "../constant";
 const Register = () => {
   const navigation = useNavigate();
   const [formData, setFormData] = useState({ username: "", email: "", password: "" });
@@ -12,7 +13,7 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:8000/auth/register", formData);
+      const response = await axios.post(`${BASE_URL}/auth/register`, formData);
       navigation("/")
     } catch (err) {
       console.error(err);
