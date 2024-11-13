@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { BASE_URL } from "../constant";
 
 const Login = ({ setToken }) => {
   const [formData, setFormData] = useState({ email: "", password: "" });
@@ -14,7 +15,7 @@ const Login = ({ setToken }) => {
     setError("");  
 
     try {
-      const response = await axios.post("http://localhost:8000/auth/login", formData);
+      const response = await axios.post(`${BASE_URL}/auth/login`, formData);
       setToken(response.data.token);
       alert("Login successful!");
     } catch (err) {
