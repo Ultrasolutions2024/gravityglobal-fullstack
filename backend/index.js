@@ -40,7 +40,7 @@ connectDb();
 
 // Use CORS middleware
 const corsOptions = {
-  origin: ['https://gravityglobalexport.com', 'https://www.gravityglobalexport.com'],
+  origin: ['https://gravityglobalexport.com', 'https://www.gravityglobalexport.com','http://localhost:3000'],
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   allowedHeaders: ['Content-Type', 'Authorization']
 };
